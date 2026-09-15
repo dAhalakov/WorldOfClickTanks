@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <link rel="icon" href="images/icon.png" type="image/png">
+    <title>World of ClickTanks</title>
+</head>
+
+<body>
+    <audio id="background-music" autoplay loop>
+        <source src="theme.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="shoot-sound">
+        <source src="shoot.mp3" type="audio/mpeg">
+    </audio>
+    <div id="start-screen">
+    <div id="start-box">
+        <h1>World of ClickTanks</h1>
+        <p>ENTER YOUR NICKNAME</p>
+        <input
+            type="text"
+            id="nickname-input"
+            placeholder="Nickname"
+            maxlength="16"
+        >
+        <button id="play-button">PLAY</button>
+    </div>
+</div>
+    <main id="play-zone">
+        <section id="profile">
+            <div class="profile-nickname">
+                <span id="nickname">Author: XVIIIHYDROGEN</span>
+            </div>
+            <button id="reset-button">RESET</button>
+            <button id="sound-button">
+                <img
+                    id="sound-icon"
+                    src="images/sound-on.png"
+                    alt="Sound"
+                >
+            </button>
+            <div class="resource">
+                <img src="images/exp.png" class="img-profile">
+                <div>
+                    <small>EXPERIENCE</small>
+                    <span id="exp">0</span>
+                </div>
+            </div>
+            <div class="resource">
+                <img src="images/money.png" class="img-profile">
+                <div>
+                    <small>CREDITS</small>
+                    <span id="money">0</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="clicker">
+            <div id="shoot-info"></div>
+            <div class="tank-container">
+                <div class="tank-title">
+                    <span>ENEMY TANK</span>
+                    <span class="tank-level" id="tank-name">Tank Destroyer</span>
+                </div>
+                <img
+                    id="tank-image"
+                    src="images/tanks/destroyer.png"
+                    alt="Enemy tank"
+                >
+                <div id="health-container">
+                    <div class="health-info">
+                        <span>HP</span>
+                        <span id="text-health-bar">21 / 100</span>
+                    </div>
+                    <progress
+                        id="health-bar"
+                        max="100"
+                        value="21">
+                    </progress>
+                </div>
+                <div class="attack-hint">
+                    CLICK TO FIRE
+                </div>
+            </div>
+        </section>
+
+        <div id="shop">
+            <h2>AMMO</h2>
+            <div class="ammo-list">
+                <div class="ammo active" id="AP">
+                    <img src="images/weapons/AP.png" class="img-ammo">
+                    <div class="ammo-info">
+                        <h3>AP</h3>
+                        <p>
+                            <strong>Damage:</strong>
+                            <span class="ammo-damage"></span>
+                        </p>
+                        <p>
+                            <strong>Penetration:</strong>
+                            <span class="ammo-penetration"></span>
+                        </p>
+                        <p>
+                            <strong>Cost:</strong>
+                            <span class="ammo-cost"></span>
+                        </p>
+                    </div>
+                    <span class="ammo-status">ACTIVE</span>
+                </div>
+
+                <div class="ammo" id="APCR">
+                    <img src="images/weapons/APCR.png" class="img-ammo">
+                    <div class="ammo-info">
+                        <h3>APCR</h3>
+                        <p>
+                            <strong>Damage:</strong>
+                            <span class="ammo-damage"></span>
+                        </p>
+                        <p>
+                            <strong>Penetration:</strong>
+                            <span class="ammo-penetration"></span>
+                        </p>
+                        <p>
+                            <strong>Cost:</strong>
+                            <span class="ammo-cost"></span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="ammo" id="HE">
+                    <img src="images/weapons/HE.png" class="img-ammo">
+                    <div class="ammo-info">
+                        <h3>HE</h3>
+                        <p>
+                            <strong>Damage:</strong>
+                            <span class="ammo-damage"></span>
+                        </p>
+                        <p>
+                            <strong>Penetration:</strong>
+                            <span class="ammo-penetration"></span>
+                        </p>
+                        <p>
+                            <strong>Cost:</strong>
+                            <span class="ammo-cost"></span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="ammo" id="HEAT">
+                    <img src="images/weapons/HEAT.png" class="img-ammo">
+                    <div class="ammo-info">
+                        <h3>HEAT</h3>
+                        <p>
+                            <strong>Damage:</strong>
+                            <span class="ammo-damage"></span>
+                        </p>
+                        <p>
+                            <strong>Penetration:</strong>
+                            <span class="ammo-penetration"></span>
+                        </p>
+                        <p>
+                            <strong>Cost:</strong>
+                            <span class="ammo-cost"></span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
